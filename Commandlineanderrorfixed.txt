@@ -1,0 +1,746 @@
+﻿Microsoft Windows [Version 10.0.19042.1237]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>python --version
+Python 3.8.6
+
+C:\Users\admin>python test.py
+python: can't open file 'test.py': [Errno 2] No such file or directory
+
+C:\Users\admin>cd C:\inetpub\wwwroot
+
+C:\inetpub\wwwroot>python test.py
+Content-Type: text/plain
+
+This is my FIRST Python Program!!!!!
+
+ .----------------.  .----------------.  .----------------.  .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. |
+| |  _________   | || |  _________   | || |    _______   | || |  _________   | |
+| | |  _   _  |  | || | |_   ___  |  | || |   /  ___  |  | || | |  _   _  |  | |
+| | |_/ | | \_|  | || |   | |_  \_|  | || |  |  (__ \_|  | || | |_/ | | \_|  | |
+| |     | |      | || |   |  _|  _   | || |   '.___`-.   | || |     | |      | |
+| |    _| |_     | || |  _| |___/ |  | || |  |`\____) |  | || |    _| |_     | |
+| |   |_____|    | || | |_________|  | || |  |_______.'  | || |   |_____|    | |
+| |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'
+
+
+C:\inetpub\wwwroot>cd C:\CODE
+
+C:\CODE>python app.py
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    from resumeParserClient import resumeParser
+  File "C:\CODE\resumeParserClient.py", line 4, in <module>
+    import tika
+ModuleNotFoundError: No module named 'tika'
+
+C:\CODE>pip install tika
+Collecting tika
+  Downloading tika-1.24.tar.gz (28 kB)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tika) (49.2.1)
+Collecting requests
+  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 164 kB/s
+Collecting idna<4,>=2.5; python_version >= "3"
+  Downloading idna-3.2-py3-none-any.whl (59 kB)
+     |████████████████████████████████| 59 kB 1.8 MB/s
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.7-py2.py3-none-any.whl (138 kB)
+     |████████████████████████████████| 138 kB 819 kB/s
+Collecting charset-normalizer~=2.0.0; python_version >= "3"
+  Downloading charset_normalizer-2.0.6-py3-none-any.whl (37 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.5.30-py2.py3-none-any.whl (145 kB)
+     |████████████████████████████████| 145 kB 656 kB/s
+Using legacy 'setup.py install' for tika, since package 'wheel' is not installed.
+Installing collected packages: idna, urllib3, charset-normalizer, certifi, requests, tika
+    Running setup.py install for tika ... done
+Successfully installed certifi-2021.5.30 charset-normalizer-2.0.6 idna-3.2 requests-2.26.0 tika-1.24 urllib3-1.26.7
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>python app.py
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    from resumeParserClient import resumeParser
+  File "C:\CODE\resumeParserClient.py", line 7, in <module>
+    from resume_parser import resumeparse
+ModuleNotFoundError: No module named 'resume_parser'
+
+C:\CODE>pip install resumeparse
+ERROR: Could not find a version that satisfies the requirement resumeparse (from versions: none)
+ERROR: No matching distribution found for resumeparse
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install resume-parser
+Collecting resume-parser
+  Downloading resume_parser-0.8.2-py3-none-any.whl (9.1 MB)
+     |████████████████████████████████| 9.1 MB 8.4 kB/s
+Collecting numpy>=1.19.1
+  Downloading numpy-1.21.2-cp38-cp38-win_amd64.whl (14.0 MB)
+     |████████████████████████████████| 14.0 MB 435 kB/s
+Collecting pdfminer.six>=20200517
+  Downloading pdfminer.six-20201018-py3-none-any.whl (5.6 MB)
+     |████████████████████████████████| 5.6 MB 49 kB/s
+Collecting stemming>=1.0.1
+  Downloading stemming-1.0.1.tar.gz (10 kB)
+Collecting pdfplumber>=0.5.23
+  Downloading pdfplumber-0.5.28.tar.gz (45 kB)
+     |████████████████████████████████| 45 kB 172 kB/s
+Collecting nltk>=3.5
+  Downloading nltk-3.6.3-py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 504 kB/s
+Collecting spacy>=2.3.2
+  Downloading spacy-3.1.3-cp38-cp38-win_amd64.whl (12.0 MB)
+     |████████████████████████████████| 12.0 MB 30 kB/s
+Requirement already satisfied: tika>=1.24 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from resume-parser) (1.24)
+Collecting docx2txt>=0.8
+  Downloading docx2txt-0.8.tar.gz (2.8 kB)
+Collecting phonenumbers>=8.12.7
+  Downloading phonenumbers-8.12.33-py2.py3-none-any.whl (2.6 MB)
+     |████████████████████████████████| 2.6 MB 544 kB/s
+Collecting pandas>=1.1.0
+  Downloading pandas-1.3.3-cp38-cp38-win_amd64.whl (10.2 MB)
+     |████████████████████████████████| 10.2 MB 62 kB/s
+Collecting cryptography
+  Downloading cryptography-35.0.0-cp36-abi3-win_amd64.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 819 kB/s
+Collecting chardet; python_version > "3.0"
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+     |████████████████████████████████| 178 kB 117 kB/s
+Collecting sortedcontainers
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting Pillow>=7.0.0
+  Downloading Pillow-8.3.2-cp38-cp38-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 598 kB/s
+Collecting Wand
+  Downloading Wand-0.6.7-py2.py3-none-any.whl (139 kB)
+     |████████████████████████████████| 139 kB 656 kB/s
+Requirement already satisfied: click in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk>=3.5->resume-parser) (8.0.1)
+Collecting joblib
+  Downloading joblib-1.0.1-py3-none-any.whl (303 kB)
+     |████████████████████████████████| 303 kB 64 kB/s
+Collecting tqdm
+  Downloading tqdm-4.62.3-py2.py3-none-any.whl (76 kB)
+     |████████████████████████████████| 76 kB 157 kB/s
+Collecting regex
+  Downloading regex-2021.9.30-cp38-cp38-win_amd64.whl (273 kB)
+     |████████████████████████████████| 273 kB 544 kB/s
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy>=2.3.2->resume-parser) (49.2.1)
+Collecting catalogue<2.1.0,>=2.0.6
+  Downloading catalogue-2.0.6-py3-none-any.whl (17 kB)
+Collecting typer<0.5.0,>=0.3.0
+  Downloading typer-0.4.0-py3-none-any.whl (27 kB)
+Collecting blis<0.8.0,>=0.4.0
+  Downloading blis-0.7.4-cp38-cp38-win_amd64.whl (6.5 MB)
+     |████████████████████████████████| 6.5 MB 26 kB/s
+Collecting preshed<3.1.0,>=3.0.2
+  Downloading preshed-3.0.5-cp38-cp38-win_amd64.whl (112 kB)
+     |████████████████████████████████| 112 kB 547 kB/s
+Collecting cymem<2.1.0,>=2.0.2
+  Downloading cymem-2.0.5-cp38-cp38-win_amd64.whl (36 kB)
+Collecting pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4
+  Downloading pydantic-1.8.2-cp38-cp38-win_amd64.whl (2.0 MB)
+     |████████████████████████████████| 2.0 MB 726 kB/s
+Requirement already satisfied: jinja2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy>=2.3.2->resume-parser) (3.0.1)
+Collecting spacy-legacy<3.1.0,>=3.0.8
+  Downloading spacy_legacy-3.0.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy>=2.3.2->resume-parser) (2.26.0)
+Collecting murmurhash<1.1.0,>=0.28.0
+  Downloading murmurhash-1.0.5-cp38-cp38-win_amd64.whl (21 kB)
+Collecting pathy>=0.3.5
+  Downloading pathy-0.6.0-py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 172 kB/s
+Collecting srsly<3.0.0,>=2.4.1
+  Downloading srsly-2.4.1-cp38-cp38-win_amd64.whl (451 kB)
+     |████████████████████████████████| 451 kB 364 kB/s
+Collecting wasabi<1.1.0,>=0.8.1
+  Downloading wasabi-0.8.2-py3-none-any.whl (23 kB)
+Collecting packaging>=20.0
+  Downloading packaging-21.0-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 251 kB/s
+Collecting thinc<8.1.0,>=8.0.9
+  Downloading thinc-8.0.10-cp38-cp38-win_amd64.whl (1.0 MB)
+     |████████████████████████████████| 1.0 MB 46 kB/s
+Collecting pytz>=2017.3
+  Downloading pytz-2021.3-py2.py3-none-any.whl (503 kB)
+     |████████████████████████████████| 503 kB 43 kB/s
+Collecting python-dateutil>=2.7.3
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 547 kB/s
+Collecting cffi>=1.12
+  Downloading cffi-1.14.6-cp38-cp38-win_amd64.whl (179 kB)
+     |████████████████████████████████| 179 kB 930 kB/s
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from click->nltk>=3.5->resume-parser) (0.4.4)
+Collecting typing-extensions>=3.7.4.3
+  Downloading typing_extensions-3.10.0.2-py3-none-any.whl (26 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from jinja2->spacy>=2.3.2->resume-parser) (2.0.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=2.3.2->resume-parser) (1.26.7)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=2.3.2->resume-parser) (2.0.6)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=2.3.2->resume-parser) (2021.5.30)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy>=2.3.2->resume-parser) (3.2)
+Collecting smart-open<6.0.0,>=5.0.0
+  Downloading smart_open-5.2.1-py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 550 kB/s
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |████████████████████████████████| 67 kB 442 kB/s
+Collecting six>=1.5
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting pycparser
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+     |████████████████████████████████| 112 kB 1.7 MB/s
+Using legacy 'setup.py install' for stemming, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for pdfplumber, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for docx2txt, since package 'wheel' is not installed.
+Installing collected packages: numpy, pycparser, cffi, cryptography, chardet, sortedcontainers, pdfminer.six, stemming, Pillow, Wand, pdfplumber, joblib, tqdm, regex, nltk, catalogue, typer, blis, murmurhash, cymem, preshed, typing-extensions, pydantic, spacy-legacy, smart-open, pathy, srsly, wasabi, pyparsing, packaging, thinc, spacy, docx2txt, phonenumbers, pytz, six, python-dateutil, pandas, resume-parser
+    Running setup.py install for stemming ... done
+    Running setup.py install for pdfplumber ... done
+    Running setup.py install for docx2txt ... done
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+pdfplumber 0.5.28 requires pdfminer.six==20200517, but you'll have pdfminer-six 20201018 which is incompatible.
+Successfully installed Pillow-8.3.2 Wand-0.6.7 blis-0.7.4 catalogue-2.0.6 cffi-1.14.6 chardet-4.0.0 cryptography-35.0.0 cymem-2.0.5 docx2txt-0.8 joblib-1.0.1 murmurhash-1.0.5 nltk-3.6.3 numpy-1.21.2 packaging-21.0 pandas-1.3.3 pathy-0.6.0 pdfminer.six-20201018 pdfplumber-0.5.28 phonenumbers-8.12.33 preshed-3.0.5 pycparser-2.20 pydantic-1.8.2 pyparsing-2.4.7 python-dateutil-2.8.2 pytz-2021.3 regex-2021.9.30 resume-parser-0.8.2 six-1.16.0 smart-open-5.2.1 sortedcontainers-2.4.0 spacy-3.1.3 spacy-legacy-3.0.8 srsly-2.4.1 stemming-1.0.1 thinc-8.0.10 tqdm-4.62.3 typer-0.4.0 typing-extensions-3.10.0.2 wasabi-0.8.2
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>python app.py
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    from resumeParserClient import resumeParser
+  File "C:\CODE\resumeParserClient.py", line 7, in <module>
+    from resume_parser import resumeparse
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\resume_parser\__init__.py", line 1, in <module>
+    from resume_parser.resumeparse import resumeparse
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\resume_parser\resumeparse.py", line 50, in <module>
+    nlp = spacy.load('en_core_web_sm')
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\__init__.py", line 51, in load
+    return util.load_model(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py", line 354, in load_model
+    raise IOError(Errors.E050.format(name=name))
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+
+C:\CODE>python -m spacy download en_core_web_lg
+Collecting en-core-web-lg==3.1.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.1.0/en_core_web_lg-3.1.0-py3-none-any.whl (777.1 MB)
+     |████████████████████████████████| 777.1 MB 639 bytes/s
+Requirement already satisfied: spacy<3.2.0,>=3.1.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from en-core-web-lg==3.1.0) (3.1.3)
+Requirement already satisfied: wasabi<1.1.0,>=0.8.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (0.8.2)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (1.0.5)
+Requirement already satisfied: numpy>=1.15.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (1.21.2)
+Requirement already satisfied: packaging>=20.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (21.0)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (3.0.5)
+Requirement already satisfied: blis<0.8.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (0.7.4)
+Requirement already satisfied: pathy>=0.3.5 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (0.6.0)
+Requirement already satisfied: tqdm<5.0.0,>=4.38.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (4.62.3)
+Requirement already satisfied: typer<0.5.0,>=0.3.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (0.4.0)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.26.0)
+Requirement already satisfied: jinja2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (3.0.1)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (49.2.1)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (1.8.2)
+Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.8 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (3.0.8)
+Requirement already satisfied: catalogue<2.1.0,>=2.0.6 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.0.6)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.0.5)
+Requirement already satisfied: thinc<8.1.0,>=8.0.9 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (8.0.10)
+Requirement already satisfied: srsly<3.0.0,>=2.4.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.4.1)
+Requirement already satisfied: pyparsing>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from packaging>=20.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.4.7)
+Requirement already satisfied: smart-open<6.0.0,>=5.0.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pathy>=0.3.5->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (5.2.1)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tqdm<5.0.0,>=4.38.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (0.4.4)
+Requirement already satisfied: click<9.0.0,>=7.1.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from typer<0.5.0,>=0.3.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (8.0.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (1.26.7)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.0.6)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2021.5.30)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (3.2)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from jinja2->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (2.0.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4->spacy<3.2.0,>=3.1.0->en-core-web-lg==3.1.0) (3.10.0.2)
+Installing collected packages: en-core-web-lg
+Successfully installed en-core-web-lg-3.1.0
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'C:\Users\admin\AppData\Local\Programs\Python\Python38\python.exe -m pip install --upgrade pip' command.
+✔ Download and installation successful
+You can now load the package via spacy.load('en_core_web_lg')
+
+C:\CODE>python -m spacy download en_core_web_sm
+Collecting en-core-web-sm==3.1.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl (13.6 MB)
+     |████████████████████████████████| 13.6 MB 544 kB/s
+Requirement already satisfied: spacy<3.2.0,>=3.1.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from en-core-web-sm==3.1.0) (3.1.3)
+Requirement already satisfied: tqdm<5.0.0,>=4.38.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (4.62.3)
+Requirement already satisfied: numpy>=1.15.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (1.21.2)
+Requirement already satisfied: jinja2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (3.0.1)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (49.2.1)
+Requirement already satisfied: wasabi<1.1.0,>=0.8.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (0.8.2)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.0.5)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (1.0.5)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (3.0.5)
+Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.8 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (3.0.8)
+Requirement already satisfied: catalogue<2.1.0,>=2.0.6 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.0.6)
+Requirement already satisfied: thinc<8.1.0,>=8.0.9 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (8.0.10)
+Requirement already satisfied: typer<0.5.0,>=0.3.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (0.4.0)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (1.8.2)
+Requirement already satisfied: pathy>=0.3.5 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (0.6.0)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.26.0)
+Requirement already satisfied: packaging>=20.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (21.0)
+Requirement already satisfied: srsly<3.0.0,>=2.4.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.4.1)
+Requirement already satisfied: blis<0.8.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (0.7.4)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tqdm<5.0.0,>=4.38.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (0.4.4)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from jinja2->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.0.1)
+Requirement already satisfied: click<9.0.0,>=7.1.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from typer<0.5.0,>=0.3.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (8.0.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (3.10.0.2)
+Requirement already satisfied: smart-open<6.0.0,>=5.0.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pathy>=0.3.5->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (5.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2021.5.30)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (1.26.7)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (3.2)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.0.6)
+Requirement already satisfied: pyparsing>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from packaging>=20.0->spacy<3.2.0,>=3.1.0->en-core-web-sm==3.1.0) (2.4.7)
+Installing collected packages: en-core-web-sm
+Successfully installed en-core-web-sm-3.1.0
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'C:\Users\admin\AppData\Local\Programs\Python\Python38\python.exe -m pip install --upgrade pip' command.
+✔ Download and installation successful
+You can now load the package via spacy.load('en_core_web_sm')
+
+C:\CODE>python app.py
+C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:766: UserWarning: [W094] Model 'en_training' (0.0.0) specifies an under-constrained spaCy version requirement: >=2.2.4. This can lead to compatibility problems with older versions, or as new spaCy versions are released, because the model may say it's compatible when it's not. Consider changing the "spacy_version" in your meta.json to a version range, with a lower and upper pin. For example: >=3.1.3,<3.2.0
+  warnings.warn(warn_msg)
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    from resumeParserClient import resumeParser
+  File "C:\CODE\resumeParserClient.py", line 7, in <module>
+    from resume_parser import resumeparse
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\resume_parser\__init__.py", line 1, in <module>
+    from resume_parser.resumeparse import resumeparse
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\resume_parser\resumeparse.py", line 51, in <module>
+    custom_nlp2 = spacy.load(os.path.join(base_path,"degree","model"))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\__init__.py", line 51, in load
+    return util.load_model(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py", line 349, in load_model
+    return load_model_from_path(Path(name), **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py", line 414, in load_model_from_path
+    config = load_config(config_path, overrides=overrides)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py", line 571, in load_config
+    raise IOError(Errors.E053.format(path=config_path, name="config.cfg"))
+OSError: [E053] Could not read config.cfg from C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\resume_parser\degree\model\config.cfg
+
+C:\CODE>
+C:\CODE>
+C:\CODE>pip install nltk
+Requirement already satisfied: nltk in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (3.6.3)
+Requirement already satisfied: click in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk) (8.0.1)
+Requirement already satisfied: tqdm in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk) (4.62.3)
+Requirement already satisfied: regex in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk) (2021.9.30)
+Requirement already satisfied: joblib in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk) (1.0.1)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from click->nltk) (0.4.4)
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install spacy==2.3.5
+Collecting spacy==2.3.5
+  Downloading spacy-2.3.5-cp38-cp38-win_amd64.whl (9.7 MB)
+     |████████████████████████████████| 9.7 MB 13 kB/s
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (2.26.0)
+Collecting thinc<7.5.0,>=7.4.1
+  Downloading thinc-7.4.5-cp38-cp38-win_amd64.whl (910 kB)
+     |████████████████████████████████| 910 kB 656 kB/s
+Requirement already satisfied: wasabi<1.1.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (0.8.2)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (1.0.5)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (3.0.5)
+Collecting srsly<1.1.0,>=1.0.2
+  Downloading srsly-1.0.5-cp38-cp38-win_amd64.whl (178 kB)
+     |████████████████████████████████| 178 kB 819 kB/s
+Collecting plac<1.2.0,>=0.9.6
+  Downloading plac-1.1.3-py2.py3-none-any.whl (20 kB)
+Collecting catalogue<1.1.0,>=0.0.7
+  Downloading catalogue-1.0.0-py2.py3-none-any.whl (7.7 kB)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (2.0.5)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (49.2.1)
+Requirement already satisfied: numpy>=1.15.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (1.21.2)
+Requirement already satisfied: blis<0.8.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (0.7.4)
+Requirement already satisfied: tqdm<5.0.0,>=4.38.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy==2.3.5) (4.62.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy==2.3.5) (2021.5.30)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy==2.3.5) (3.2)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy==2.3.5) (2.0.6)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy==2.3.5) (1.26.7)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tqdm<5.0.0,>=4.38.0->spacy==2.3.5) (0.4.4)
+Installing collected packages: srsly, plac, catalogue, thinc, spacy
+  Attempting uninstall: srsly
+    Found existing installation: srsly 2.4.1
+    Uninstalling srsly-2.4.1:
+      Successfully uninstalled srsly-2.4.1
+  Attempting uninstall: catalogue
+    Found existing installation: catalogue 2.0.6
+    Uninstalling catalogue-2.0.6:
+      Successfully uninstalled catalogue-2.0.6
+  Attempting uninstall: thinc
+    Found existing installation: thinc 8.0.10
+    Uninstalling thinc-8.0.10:
+      Successfully uninstalled thinc-8.0.10
+  Attempting uninstall: spacy
+    Found existing installation: spacy 3.1.3
+    Uninstalling spacy-3.1.3:
+      Successfully uninstalled spacy-3.1.3
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+en-core-web-sm 3.1.0 requires spacy<3.2.0,>=3.1.0, but you'll have spacy 2.3.5 which is incompatible.
+en-core-web-lg 3.1.0 requires spacy<3.2.0,>=3.1.0, but you'll have spacy 2.3.5 which is incompatible.
+Successfully installed catalogue-1.0.0 plac-1.1.3 spacy-2.3.5 srsly-1.0.5 thinc-7.4.5
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+Collecting https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz (12.0 MB)
+     |████████████████████████████████| 12.0 MB 544 kB/s
+Requirement already satisfied: spacy<2.4.0,>=2.3.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from en-core-web-sm==2.3.1) (2.3.5)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (3.0.5)
+Requirement already satisfied: tqdm<5.0.0,>=4.38.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (4.62.3)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (2.26.0)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (49.2.1)
+Requirement already satisfied: wasabi<1.1.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (0.8.2)
+Requirement already satisfied: srsly<1.1.0,>=1.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.0.5)
+Requirement already satisfied: plac<1.2.0,>=0.9.6 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.1.3)
+Requirement already satisfied: thinc<7.5.0,>=7.4.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (7.4.5)
+Requirement already satisfied: blis<0.8.0,>=0.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (0.7.4)
+Requirement already satisfied: numpy>=1.15.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.21.2)
+Requirement already satisfied: catalogue<1.1.0,>=0.0.7 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.0.0)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (2.0.5)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.0.5)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tqdm<5.0.0,>=4.38.0->spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (0.4.4)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (2021.5.30)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (1.26.7)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (2.0.6)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests<3.0.0,>=2.13.0->spacy<2.4.0,>=2.3.0->en-core-web-sm==2.3.1) (3.2)
+Using legacy 'setup.py install' for en-core-web-sm, since package 'wheel' is not installed.
+Installing collected packages: en-core-web-sm
+  Attempting uninstall: en-core-web-sm
+    Found existing installation: en-core-web-sm 3.1.0
+    Uninstalling en-core-web-sm-3.1.0:
+      Successfully uninstalled en-core-web-sm-3.1.0
+    Running setup.py install for en-core-web-sm ... done
+Successfully installed en-core-web-sm-2.3.1
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install pyresparser
+Collecting pyresparser
+  Downloading pyresparser-1.0.6-py3-none-any.whl (4.2 MB)
+     |████████████████████████████████| 4.2 MB 32 kB/s
+Requirement already satisfied: docx2txt>=0.7 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (0.8)
+Requirement already satisfied: cymem>=2.0.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2.0.5)
+Collecting pyrsistent>=0.15.2
+  Downloading pyrsistent-0.18.0-cp38-cp38-win_amd64.whl (62 kB)
+     |████████████████████████████████| 62 kB 45 kB/s
+Requirement already satisfied: urllib3>=1.25.3 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (1.26.7)
+Requirement already satisfied: idna>=2.8 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (3.2)
+Requirement already satisfied: python-dateutil>=2.8.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2.8.2)
+Requirement already satisfied: six>=1.12.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (1.16.0)
+Requirement already satisfied: pdfminer.six>=20181108 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (20201018)
+Requirement already satisfied: certifi>=2019.6.16 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2021.5.30)
+Requirement already satisfied: thinc>=7.0.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (7.4.5)
+Collecting attrs>=19.1.0
+  Downloading attrs-21.2.0-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 137 kB/s
+Requirement already satisfied: requests>=2.22.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2.26.0)
+Requirement already satisfied: tqdm>=4.32.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (4.62.3)
+Collecting pycryptodome>=3.8.2
+  Downloading pycryptodome-3.10.4-cp35-abi3-win_amd64.whl (1.8 MB)
+     |████████████████████████████████| 1.8 MB 547 kB/s
+Requirement already satisfied: sortedcontainers>=2.1.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2.4.0)
+Requirement already satisfied: pytz>=2019.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2021.3)
+Requirement already satisfied: nltk>=3.4.3 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (3.6.3)
+Requirement already satisfied: chardet>=3.0.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (4.0.0)
+Requirement already satisfied: srsly>=0.0.7 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (1.0.5)
+Requirement already satisfied: pandas>=0.24.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (1.3.3)
+Requirement already satisfied: wasabi>=0.2.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (0.8.2)
+Requirement already satisfied: spacy>=2.1.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (2.3.5)
+Requirement already satisfied: numpy>=1.16.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (1.21.2)
+Requirement already satisfied: blis>=0.2.4 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (0.7.4)
+Collecting jsonschema>=3.0.1
+  Downloading jsonschema-4.0.1-py3-none-any.whl (69 kB)
+     |████████████████████████████████| 69 kB 418 kB/s
+Requirement already satisfied: preshed>=2.0.1 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pyresparser) (3.0.5)
+Requirement already satisfied: cryptography in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pdfminer.six>=20181108->pyresparser) (35.0.0)
+Requirement already satisfied: catalogue<1.1.0,>=0.0.7 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from thinc>=7.0.4->pyresparser) (1.0.0)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from thinc>=7.0.4->pyresparser) (1.0.5)
+Requirement already satisfied: plac<1.2.0,>=0.9.6 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from thinc>=7.0.4->pyresparser) (1.1.3)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from requests>=2.22.0->pyresparser) (2.0.6)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from tqdm>=4.32.2->pyresparser) (0.4.4)
+Requirement already satisfied: click in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk>=3.4.3->pyresparser) (8.0.1)
+Requirement already satisfied: joblib in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk>=3.4.3->pyresparser) (1.0.1)
+Requirement already satisfied: regex in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from nltk>=3.4.3->pyresparser) (2021.9.30)
+Requirement already satisfied: setuptools in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from spacy>=2.1.4->pyresparser) (49.2.1)
+Requirement already satisfied: cffi>=1.12 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from cryptography->pdfminer.six>=20181108->pyresparser) (1.14.6)
+Requirement already satisfied: pycparser in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from cffi>=1.12->cryptography->pdfminer.six>=20181108->pyresparser) (2.20)
+Installing collected packages: pyrsistent, attrs, pycryptodome, jsonschema, pyresparser
+Successfully installed attrs-21.2.0 jsonschema-4.0.1 pycryptodome-3.10.4 pyresparser-1.0.6 pyrsistent-0.18.0
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>python app.py
+C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+Traceback (most recent call last):
+  File "app.py", line 9, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+
+C:\CODE>pip install uvicorn
+Collecting uvicorn
+  Downloading uvicorn-0.15.0-py3-none-any.whl (54 kB)
+     |████████████████████████████████| 54 kB 288 kB/s
+Requirement already satisfied: click>=7.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn) (8.0.1)
+Collecting asgiref>=3.4.0
+  Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+Collecting h11>=0.8
+  Downloading h11-0.12.0-py3-none-any.whl (54 kB)
+     |████████████████████████████████| 54 kB 466 kB/s
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from click>=7.0->uvicorn) (0.4.4)
+Installing collected packages: asgiref, h11, uvicorn
+Successfully installed asgiref-3.4.1 h11-0.12.0 uvicorn-0.15.0
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>python app.py
+C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+Traceback (most recent call last):
+  File "app.py", line 12, in <module>
+    from fastapi import FastAPI,Body
+ModuleNotFoundError: No module named 'fastapi'
+
+C:\CODE>pip install fasyapi
+ERROR: Could not find a version that satisfies the requirement fasyapi (from versions: none)
+ERROR: No matching distribution found for fasyapi
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install fastapi
+Collecting fastapi
+  Downloading fastapi-0.68.1-py3-none-any.whl (52 kB)
+     |████████████████████████████████| 52 kB 65 kB/s
+Collecting starlette==0.14.2
+  Downloading starlette-0.14.2-py3-none-any.whl (60 kB)
+     |████████████████████████████████| 60 kB 1.2 MB/s
+Requirement already satisfied: pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from fastapi) (1.8.2)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2->fastapi) (3.10.0.2)
+Installing collected packages: starlette, fastapi
+Successfully installed fastapi-0.68.1 starlette-0.14.2
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>python app.py
+C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+INFO:     Started server process [11624]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11624]
+
+C:\CODE>python app.py
+C:\Users\admin\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+INFO:     Started server process [20132]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://192.168.0.104:4000 (Press CTRL+C to quit)
+INFO:     192.168.0.104:64717 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.168.0.104:64717 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [20132]
+
+C:\CODE>pip install uvicorn
+Requirement already satisfied: uvicorn in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (0.15.0)
+Requirement already satisfied: click>=7.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn) (8.0.1)
+Requirement already satisfied: h11>=0.8 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn) (0.12.0)
+Requirement already satisfied: asgiref>=3.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn) (3.4.1)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from click>=7.0->uvicorn) (0.4.4)
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>pip install uvicorn[standard]
+Requirement already satisfied: uvicorn[standard] in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (0.15.0)
+Requirement already satisfied: h11>=0.8 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn[standard]) (0.12.0)
+Requirement already satisfied: asgiref>=3.4.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn[standard]) (3.4.1)
+Requirement already satisfied: click>=7.0 in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn[standard]) (8.0.1)
+Collecting python-dotenv>=0.13; extra == "standard"
+  Downloading python_dotenv-0.19.0-py2.py3-none-any.whl (17 kB)
+Collecting httptools==0.2.*; extra == "standard"
+  Downloading httptools-0.2.0-cp38-cp38-win_amd64.whl (141 kB)
+     |████████████████████████████████| 141 kB 39 kB/s
+Collecting websockets>=9.1; extra == "standard"
+  Downloading websockets-10.0-cp38-cp38-win_amd64.whl (96 kB)
+     |████████████████████████████████| 96 kB 7.7 kB/s
+Collecting PyYAML>=5.1; extra == "standard"
+  Downloading PyYAML-5.4.1-cp38-cp38-win_amd64.whl (213 kB)
+     |████████████████████████████████| 213 kB 819 kB/s
+Requirement already satisfied: colorama>=0.4; sys_platform == "win32" and extra == "standard" in c:\users\admin\appdata\local\programs\python\python38\lib\site-packages (from uvicorn[standard]) (0.4.4)
+Collecting watchgod>=0.6; extra == "standard"
+  Downloading watchgod-0.7-py3-none-any.whl (11 kB)
+Installing collected packages: python-dotenv, httptools, websockets, PyYAML, watchgod
+Successfully installed PyYAML-5.4.1 httptools-0.2.0 python-dotenv-0.19.0 watchgod-0.7 websockets-10.0
+WARNING: You are using pip version 20.2.1; however, version 21.2.4 is available.
+You should consider upgrading via the 'c:\users\admin\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+
+C:\CODE>uvicorn app:app --host 192.168.0.104 --port 64717
+c:\users\admin\appdata\local\programs\python\python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+←[32mINFO←[0m:     Started server process [←[36m21032←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://192.168.0.104:64717←[0m (Press CTRL+C to quit)
+←[32mINFO←[0m:     192.168.0.104:53553 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     192.168.0.104:53553 - "←[1mGET /favicon.ico HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     192.168.0.104:61603 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     Shutting down
+←[32mINFO←[0m:     Waiting for application shutdown.
+←[32mINFO←[0m:     Application shutdown complete.
+←[32mINFO←[0m:     Finished server process [←[36m21032←[0m]
+
+C:\CODE>uvicorn app:app --host 192.168.0.104 --port 50901
+c:\users\admin\appdata\local\programs\python\python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+←[32mINFO←[0m:     Started server process [←[36m20720←[0m]
+←[32mINFO←[0m:     Waiting for application startup.
+←[32mINFO←[0m:     Application startup complete.
+←[32mINFO←[0m:     Uvicorn running on ←[1mhttp://192.168.0.104:50901←[0m (Press CTRL+C to quit)
+←[32mINFO←[0m:     192.168.0.104:58855 - "←[1mGET / HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+←[32mINFO←[0m:     192.168.0.104:58855 - "←[1mGET /favicon.ico HTTP/1.1←[0m" ←[31m404 Not Found←[0m
+
+
+“Upgrading spacy pip”  command line
+pip install -U spacy   
+
+Checking version SpaCy  Command line
+python -m spacy validate
+
+
+
+
+
+pip install nltk
+pip install spacy==2.3.5
+
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+
+pip install pyresparser
+pip install uvicorn
+pip install fastapi
+
+Input  paramteres POSTMAN
+{
+    "resume_path":"C:CODE/resume.pdf",
+    "jdDetails":{
+        "req_exp":3,
+        "req_skills":["java","nlp","python","sql","go","cpp"]
+    }
+}
+
+
+Python path
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38
+
+
+
+****************************21 OCT 2021 *********************
+C:\Users\Administrator>cd C:\AIApplicationJD
+
+C:\AIApplicationJD>python app.py
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    from resumeParserClient import resumeParser
+  File "C:\AIApplicationJD\resumeParserClient.py", line 4, in <module>
+    import tika
+ModuleNotFoundError: No module named 'tika'
+
+C:\AIApplicationJD>pip install tika
+Collecting tika
+  Downloading tika-1.24.tar.gz (28 kB)
+Requirement already satisfied: setuptools in c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages (from tika) (49.2.1)
+Collecting requests
+  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 354 kB/s
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+     |████████████████████████████████| 149 kB 6.4 MB/s
+Collecting charset-normalizer~=2.0.0; python_version >= "3"
+  Downloading charset_normalizer-2.0.7-py3-none-any.whl (38 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.7-py2.py3-none-any.whl (138 kB)
+     |████████████████████████████████| 138 kB 6.8 MB/s
+Collecting idna<4,>=2.5; python_version >= "3"
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 3.7 MB/s
+Using legacy 'setup.py install' for tika, since package 'wheel' is not installed.
+Installing collected packages: certifi, charset-normalizer, urllib3, idna, requests, tika
+    Running setup.py install for tika ... done
+Successfully installed certifi-2021.10.8 charset-normalizer-2.0.7 idna-3.3 requests-2.26.0 tika-1.24 urllib3-1.26.7
+WARNING: You are using pip version 20.2.1; however, version 21.3 is available.
+You should consider upgrading via the 'c:\users\administrator\appdata\local\programs\python\python38\python.exe -m pip install --upgrade pip' command.
+C:\AIApplicationJD>pip install resume-parser
+C:\AIApplicationJD>pip install nltk
+C:\AIApplicationJD>pip install spacy==2.3.5
+C:\AIApplicationJD>pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+C:\AIApplicationJD>pip install pyresparser
+C:\AIApplicationJD>pip install uvicorn
+C:\AIApplicationJD>pip install fastapi
+C:\AIApplicationJD>python app.py
+C:\Users\Administrator\AppData\Local\Programs\Python\Python38\lib\site-packages\spacy\util.py:275: UserWarning: [W031] Model 'en_training' (0.0.0) requires spaCy v2.2 and is incompatible with the current spaCy version (2.3.5). This may lead to unexpected results or runtime errors. To resolve this, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+INFO:     Started server process [10196]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://10.50.201.51:4000 (Press CTRL+C to quit)
+INFO:     10.50.201.51:53829 - "GET / HTTP/1.1" 404 Not Found
+INFO:     10.50.201.51:53829 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+
+
+
+
+STARTING A PYTHON APP
+Let’s take this dumbly simple Python app and call it hello.py:
+#!/usr/bin/python
+import time
+
+while 1:
+    print("Start: %s" % time.ctime())
+    time.sleep(1)
+Now to start it:
+
+pm2 start hello.py
+You will then see the process started:
+
+[PM2] Starting /home/florian/playground-python/hello.py in fork_mode (1 instance)
+[PM2] Done.
+┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬──────────┬──────────┐
+│ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem      │ watching │
+├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼──────────┼──────────┤
+│ hello    │ 0  │ fork │ 76055 │ online │ 0       │ 0s     │ 2%  │ 2.8 MB   │ disabled │
+└──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴──────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+
+C:\AIApplicationJD>pm2 start app.py
+[PM2] Starting C:\AIApplicationJD\app.py in fork_mode (1 instance)
+[PM2] Done.
+┌─────┬───────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name          │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼───────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1   │ MailServer    │ default     │ 1.0.0   │ fork    │ 2420     │ 8m     │ 1    │ online    │ 0%       │ 34.3mb   │ Adm… │ disabled │
+│ 0   │ TALNETAPI     │ default     │ 1.0.0   │ fork    │ 6152     │ 8m     │ 1    │ online    │ 0%       │ 39.3mb   │ Adm… │ disabled │
+│ 3   │ app           │ default     │ N/A     │ fork    │ 8340     │ 0s     │ 0    │ online    │ 0%       │ 10.1mb   │ Adm… │ disabled │
+│ 2   │ hello         │ default     │ N/A     │ fork    │ 6644     │ 2m     │ 0    │ online    │ 0%       │ 8.4mb    │ Adm… │ disabled │
+└─────┴───────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+[PM2][WARN] Current process list is not synchronized with saved list. Type 'pm2 save' to synchronize.

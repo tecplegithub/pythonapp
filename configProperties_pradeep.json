@@ -1,0 +1,16 @@
+ 
+  {
+  "app.host"                       : "10.50.201.51",
+  "app.port"                       : 4002,
+  "primaryskill.weightage"         : 0.75,
+  "secondaryskill.weightage"       : 0.50,
+
+  "sql.host"                       : "localhost", 
+  "sql.user"                       : "testuser1",
+  "sql.password"                   : "testuser1",
+
+  "sql.database"                   : "pradeep_new_db",
+  "sql.table"                      : "skilldetails",
+
+  "graph.folder"                   : "graph_storage"
+}

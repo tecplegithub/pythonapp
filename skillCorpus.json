@@ -1,0 +1,18 @@
+{
+	"java"			: ["java","j2ee","core java","jdk","spring"],
+	"python"		: ["python"],
+	"php"       	: ["php","codeignitor","laravel"],
+	"cpp"       	: ["cpp","c++"],
+	"c"         	: ["c"],
+	"javascript"	: ["javascript","js","angular","angular js"],
+	"go"        	: ["go","golang", "go language"],
+	"android"   	: ["android","android sdk"],
+	"ios"       	: ["ios","swift","objective c"],
+	"c#"        	: ["c#","c sharp"],
+	".net"      	: [".net","asp.net","dot net","vb.net","asp.net core"],
+	"angular js"    : ["angular","angular js"],
+	"firebase"		: ["firebase"],
+	"spacy"         : ["spacy"],
+	"nlp"           : ["nlp","natural language processing"]
+
+ }

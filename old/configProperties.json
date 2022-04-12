@@ -1,0 +1,8 @@
+{
+  "app.host"                : "10.50.201.51",
+  "app.port"                : 4001,
+  "skill_weightage"         : 0.5,
+  "exp_normalization_range" : 1,
+  "exp_weightage"           : 0.5
+
+}

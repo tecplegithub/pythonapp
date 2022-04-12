@@ -1,0 +1,850 @@
+
+/home/pradeep/Desktop/WORK/resume_suggetion_engine/resume/resume1.pdf",
+    "jdDetails
+
+
+curl --location --request POST 'http://0.0.0.0:4000/v1/resumeScoring/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "resume_path":"/home/pradeep/Desktop/WORK/resume_suggetion_engine/resume/resume1.pdf",
+    "jdDetails":{
+        "req_exp":3,
+        "req_skills":["java","nlp","python","sql","go","cpp"]
+    }
+}'
+
+
+curl --location --request POST 'http://192.168.0.104:4000/v1/resumeScoring/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "resume_path":"C:/CODE/resume.pdf",
+    "jdDetails":{
+        "req_exp":3,
+        "req_skills":["java","nlp","python","sql","go","cpp"]
+    }
+}'
+
+
+curl --location --request POST 'http://192.168.0.101:4000/v1/resumeScoring/
+ <http://192.168.0.101:4000/v1/resumeScoring/>' \--header 'Content-Type:
+application/json' \--data-raw '{
+"resume_path":"C:/CODE/resume.pdf",
+   "jdDetails":{        "req_exp":3,
+"req_skills":["java","nlp","python","sql","go","cpp"]    }}'
+
+
+
+
+
+Return-Path: <pradeeprajkvr@gmail.com>
+Delivered-To: aruna@tecpleglobal.com
+Received: from server38.hostingraja.org
+	by server38.hostingraja.org with LMTP
+	id +AeXDpgmvmCW+Q0A4RARxA
+	(envelope-from <pradeeprajkvr@gmail.com>)
+	for <aruna@tecpleglobal.com>; Mon, 07 Jun 2021 19:30:56 +0530
+Return-path: <pradeeprajkvr@gmail.com>
+Envelope-to: aruna@tecpleglobal.com
+Delivery-date: Mon, 07 Jun 2021 19:30:56 +0530
+Received: from mail-lf1-f46.google.com ([209.85.167.46]:40801)
+	by server38.hostingraja.org with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.93)
+	(envelope-from <pradeeprajkvr@gmail.com>)
+	id 1lqFoA-003sSA-4u
+	for aruna@tecpleglobal.com; Mon, 07 Jun 2021 19:30:56 +0530
+Received: by mail-lf1-f46.google.com with SMTP id w33so26355087lfu.7
+        for <aruna@tecpleglobal.com>; Mon, 07 Jun 2021 06:38:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=19vWtHDV6BoX8o0LoFW8QW7dDbILbSOKQwCb8YtaKNI=;
+        b=q4k62HhHQWCqHZDuCscwQ083A0BeMqfcHViuitzJWSq94+3B4wOpNP0HpgaevliCZW
+         qWiEiifNpFALh40kcRY8ROydnAmnIJmg+aw50R0aO5pcvfaqsJr0GHPgMUtTR6ZzFr5/
+         TKvyX7qMjGR0pYi6IUFyVrajVGD7hhoXDAar5bGuyDNn56G178v4Ye5rwcyO5W04RZ0R
+         fr/dlhvDhUjvI7++Q5D4zQPDTQAgvszybRunYLYkZDxMHw+7yXm77KrXAk5KBCyNjy+V
+         6CD4u/0W5k/XSWvavbcJlbNLynS1YLETVsxjuAGjBti7qDuwvZ1NdarJrYkGTYasqE4k
+         QPdw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=19vWtHDV6BoX8o0LoFW8QW7dDbILbSOKQwCb8YtaKNI=;
+        b=VaG5cEHubaOEh/B/eThRPCziysVfexFhUPvNPCFG49Ks7cMzvNIHZRz30Mbqdj+Gnu
+         7IPHXtZnEPPmyGAcgire9jwka3NNLq6BV3xlRbb1sciijqKEEwY6pbHtNT6Rf3C29BsF
+         sUVcX+Qv2TQHKqpCM7bemQ6bH6/NC/J6lHxO8ICj98jo7OrHp3VkM8FmKeFNRFeXmtZh
+         w0SrTmm4OpTzAHLxXO88fcYxS7NNu6pkJ+c+/oHFcRBs6UG8M+oFyZqnPAYIp0FKkT3Q
+         QnnVu9ZtqAZsIM/BXvlWyp826YAkJ4tPOUXeuvsWzrdYsljaxqU20L/La6oIV40Q4Fup
+         fwHQ==
+X-Gm-Message-State: AOAM5313fCaQK6wzfogXsCgHaec6OsBpXQHpV0rF8SMFi5cJ6kz2Nin6
+	u2/XyI3QtC8099hJYBu57eohGgxh2/tEsdbpRQwnsWC2+wU=
+X-Google-Smtp-Source: ABdhPJymMOvLscpSCDy56ik3h+ojm9fwYEXAs9as/0/KrF9or9VgKNu513yUEvYZlRf/JdSLb8uSVUdHVZ0Z8mn8+ZE=
+X-Received: by 2002:ac2:5479:: with SMTP id e25mr11982743lfn.632.1623073108921;
+ Mon, 07 Jun 2021 06:38:28 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAJECbr3r2A0M=MQv50+4iaQLY4-jt99pox8rjQozXu_2NeLJhg@mail.gmail.com>
+ <CAFQWw-awD8t5HKHO0rTgLYtsFHG-GOYb0t5FOu1-i0MgCHn6Lw@mail.gmail.com> <001501d75848$2c728030$85578090$@tecpleglobal.com>
+In-Reply-To: <001501d75848$2c728030$85578090$@tecpleglobal.com>
+From: pradeep t <pradeeprajkvr@gmail.com>
+Date: Mon, 7 Jun 2021 19:08:15 +0530
+Message-ID: <CAFQWw-bSGspqzSXP=fGPzUcjj5oa_YKWY5sJJLcC6nFouRrYcA@mail.gmail.com>
+Subject: Re: JD and CV Matcher site
+To: Aruna <aruna@tecpleglobal.com>
+Content-Type: multipart/mixed; boundary="0000000000001c760205c42d2869"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "server38.hostingraja.org",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Hi Aruna, Here is the code. All other details like dependency
+    files and deployment we can discuss over the phone. On Thu, Jun 3, 2021 at
+    12:45 PM Aruna wrote: 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: tecpleglobal.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [pradeeprajkvr[at]gmail.com]
+  0.0 WEIRD_PORT             URI: Uses non-standard port number for HTTP
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+  0.0 KAM_SHORT              Use of a URL Shortener for very short URL
+X-Spam-Flag: NO
+
+--0000000000001c760205c42d2869
+Content-Type: multipart/related; boundary="0000000000001c760105c42d2868"
+
+--0000000000001c760105c42d2868
+Content-Type: multipart/alternative; boundary="0000000000001c760005c42d2867"
+
+--0000000000001c760005c42d2867
+Content-Type: text/plain; charset="UTF-8"
+
+Hi Aruna,
+
+Here is the code. All other details like dependency files and deployment
+we can discuss over the phone.
+
+On Thu, Jun 3, 2021 at 12:45 PM Aruna <aruna@tecpleglobal.com> wrote:
+
+> Hi Pradeep,
+>
+>
+>
+> Can you send us the code too?
+>
+>
+>
+> We will start testing and hosting it.
+>
+>
+>
+> Thanks and Regards,
+>
+> Aruna Devi V.P
+>
+> VP- Engineering,
+>
+>
+>
+>
+>
+>
+>
+> [image: Description: Description:
+> https://lh3.googleusercontent.com/cYx1hYyqgLvLeTvr4eRIhXyG6u-D_ET4glMRgbdeebuoZrW-r-G1Q-hIymFfVgcqNftUGYlC83i_ZjHpOZGEvBWcOZuRc3XcoiMTHMQEt2MuHn3wXDLZAr0BO-MPzhAUb0cFxliD]
+>
+> *  Aruna Devi V P*
+>
+> *Co - Founder & V.P. - Engineering*
+>
+>
+>
+> *Tecple Innoventive Solutions Pvt. Ltd.*
+>
+>
+>
+> Bengaluru I Chennai I Mumbai I Mysuru
+>
+>
+>
+> Mob.: +91 9448958088
+>
+>
+>
+> Email: aruna@tecpleglobal.com   
+>
+>
+>
+> Web:  www.tecpleglobal.com
+>
+>
+>
+>         [image: Description: Description:
+> https://lh3.googleusercontent.com/aUfMyBBcsznpTuTRNjVm-OeJjVqrM9yR9cZkfdloyJDhK8dpu8Hcnn0dzlhjpDPheUASoU7rFmqFQfERVjqVwnys9BFd_oRa3mywdWRMK-J8tLjNB_yjfJ14NxKYlY1sV92DBbQx]
+> <https://in.linkedin.com/company/tecple-innoventive-solutions-pvt-ltd>  [image:
+> Description: Description:
+> https://lh5.googleusercontent.com/sAhGPDVJFiZ5oGUENXwxiKpI2_Opbtv87h5RKYy9ow_qmfBRSCqoZ6scZEMlhwqyiU00ud3p6mXlnN8BTjLkB-DYIVFnUZXwZ_i8lWcNpQPQYHcbhmZDeqb3cdywxG84oE3PRgqK]
+> <https://www.facebook.com/pages/category/Software-Company/Tecple-Innoventive-Solutions-Pvt-Ltd-298540021094131/>
+>  [image: Description: Description:
+> https://lh5.googleusercontent.com/Ule37aMd5h9CaV2cCNZLLj21jqLjF7rD7P4huFUYomzA2L0vGzTQirY85bEXQg4qcZhSRzpoMv4YdAVAJJlZ4KhprWEvv8HG2fSRaNYkrn5vZgx8X1Wvqz0SDqUalL-GV54CW4xy]
+> <https://instagram.com/tecpleglobal?igshid=e1wdtbyk6iem> [image:
+> Description: Description:
+> https://lh4.googleusercontent.com/upYAkMNltM99VBk6KDnJ5z55KMO_LeEBgmCDIJpwPHmy426HEwwJ9QHIPKZzeVNLBsF-lb__nFx4Y5tJTswJlxk3ewVGshZQgJnEhimqkUhcfY_dmzwNrSrsHzIIsxVRJNTwLgVP]
+> <https://twitter.com/TecpleLtd> [image: Description: Description:
+> https://lh5.googleusercontent.com/XhR0Mnh60ko_o4jUw3kyp2VlzRW0UFW7dg9k_5wHOySMLpCummTvsRV6PojSU4ADFMQXYa9KSfmVQjaWsD1NKG27IVT2glD32nZR9kZxq7SgZIjVnTxIHwGwzfKakY2EEBiQqT8w]
+> <https://www.youtube.com/channel/UCYza2F4yKJ516-QFdEGzDvA>
+>
+> *           Weaving Technology for the World*
+>
+>
+>
+>
+>
+> *From:* pradeep t [mailto:pradeeprajkvr@gmail.com]
+> *Sent:* Wednesday, June 2, 2021 2:14 PM
+> *To:* SURESHNATHAN N
+> *Cc:* Aruna
+> *Subject:* Re: JD and CV Matcher site
+>
+>
+>
+> Hi Aruna,
+>
+>
+>
+> As we discussed I am sharing the screenshots of the postman window, from
+> where I am calling the resume scoring API.  All the other things like
+> functionalities we already discussed over the phone.  Please go through it
+> and let me know.
+>
+>
+>
+> Sample Curl command with body to call the API  from local is given below.
+
+> *curl --location --request POST 'http://0.0.0.0:4000/v1/resumeScoring/
+> <http://0.0.0.0:4000/v1/resumeScoring/>' \--header 'Content-Type:
+> application/json' \--data-raw '{
+> "resume_path":"/home/pradeep/Desktop/WORK/resume_suggetion_engine/resume/resume1.pdf",
+>   "jdDetails":{        "req_exp":3,
+> "req_skills":["java","nlp","python","sql","go","cpp"]    }}'*
+>
+>
+>
+
+
+
+*curl --location --request POST 'http://0.0.0.0:4000/v1/resumeScoring/
+ <http://0.0.0.0:4000/v1/resumeScoring/>' \--header 'Content-Type:
+application/json' \--data-raw '{
+"resume_path":"/home/pradeep/Desktop/WORK/resume_suggetion_engine/resume/resume1.pdf",  "jdDetails":{        "req_exp":3, "req_skills":["java","nlp","python","sql","go","cpp"]    }}'*
+>
+>
+>
+>
+>
+>
+> On Thu, May 20, 2021 at 9:54 PM SURESHNATHAN N <sureshnathann@gmail.com>
+> wrote:
+>
+> Hi,
+>
+> Let's check this site whether we plan this type of functionality
+>
+>
+>
+> https://expertia.co/demo/cvrank/
+>
+>
+>
+> R/
+>
+> Suresh
+>
+>
+>
+>
+> --
+>
+> Thanks and regards
+>
+> Pradeep.T
+>
+
+
+-- 
+Thanks and regards
+Pradeep.T
+
+--0000000000001c760005c42d2867
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Aruna,<div><br></div><div>Here is the code. All other d=
+etails like dependency=C2=A0files and deployment=C2=A0 we can discuss=C2=A0=
+over the phone.=C2=A0</div></div><br><div class=3D"gmail_quote"><div dir=3D=
+"ltr" class=3D"gmail_attr">On Thu, Jun 3, 2021 at 12:45 PM Aruna &lt;<a hre=
+f=3D"mailto:aruna@tecpleglobal.com">aruna@tecpleglobal.com</a>&gt; wrote:<b=
+r></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex=
+;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div lang=3D"EN-U=
+S"><div class=3D"gmail-m_-6434868314493321439WordSection1"><p class=3D"MsoN=
+ormal"><span style=3D"font-size:11pt;font-family:Calibri,sans-serif;color:b=
+lack">Hi Pradeep,<u></u><u></u></span></p><p class=3D"MsoNormal"><span styl=
+e=3D"font-size:11pt;font-family:Calibri,sans-serif;color:black"><u></u>=C2=
+=A0<u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-size:11pt;f=
+ont-family:Calibri,sans-serif;color:black">Can you send us the code too?<u>=
+</u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-size:11pt;=
+font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u></u></span></p>=
+<p class=3D"MsoNormal"><span style=3D"font-size:11pt;font-family:Calibri,sa=
+ns-serif;color:black">We will start testing and hosting it.<u></u><u></u></=
+span></p><p class=3D"MsoNormal"><span style=3D"font-size:11pt;font-family:C=
+alibri,sans-serif;color:black"><u></u>=C2=A0<u></u></span></p><p class=3D"M=
+soNormal"><span style=3D"font-size:11pt;font-family:Calibri,sans-serif;colo=
+r:black">Thanks and Regards,<u></u><u></u></span></p><p class=3D"MsoNormal"=
+><span style=3D"font-size:11pt;font-family:Calibri,sans-serif;color:black">=
+Aruna Devi V.P<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=
+=3D"font-size:11pt;font-family:Calibri,sans-serif;color:black">VP- Engineer=
+ing,<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-siz=
+e:11pt;font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u></u></sp=
+an></p><p class=3D"MsoNormal" style=3D"margin-bottom:2pt;line-height:115%">=
+<span lang=3D"EN-IN" style=3D"font-size:10pt;line-height:115%;font-family:C=
+alibri,sans-serif;color:rgb(25,25,25)"><u></u>=C2=A0<u></u></span></p><tabl=
+e border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse"><tbody><tr><td valign=3D"top" style=3D"border-top:none;border-bo=
+ttom:none;border-left:none;border-right:1.5pt solid rgb(23,7,208);padding:5=
+pt"><p class=3D"MsoNormal" style=3D"margin-bottom:12pt"><span style=3D"font=
+-size:11pt;font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u></u>=
+</span></p><p class=3D"MsoNormal"><span style=3D"font-size:11pt;font-family=
+:Georgia,serif;color:black;border:1pt none windowtext;padding:0in"><img wid=
+th=3D"177" height=3D"175" id=3D"gmail-m_-6434868314493321439Picture_x0020_7=
+" src=3D"cid:179e6b0b78f4ce8e91" alt=3D"Description: Description: https://l=
+h3.googleusercontent.com/cYx1hYyqgLvLeTvr4eRIhXyG6u-D_ET4glMRgbdeebuoZrW-r-=
+G1Q-hIymFfVgcqNftUGYlC83i_ZjHpOZGEvBWcOZuRc3XcoiMTHMQEt2MuHn3wXDLZAr0BO-MPz=
+hAUb0cFxliD"></span><span style=3D"color:black"><u></u><u></u></span></p></=
+td><td width=3D"327" valign=3D"top" style=3D"width:245.3pt;padding:5pt"><p =
+class=3D"MsoNormal"><b><span style=3D"font-size:11pt;font-family:Georgia,se=
+rif;color:rgb(142,5,120)">=C2=A0 Aruna Devi V P</span></b><span style=3D"co=
+lor:black"><u></u><u></u></span></p><p class=3D"MsoNormal" style=3D"text-in=
+dent:21.25pt"><i><span style=3D"font-size:10pt;font-family:Georgia,serif;co=
+lor:black">Co - Founder &amp; V.P. - Engineering</span></i><span style=3D"c=
+olor:black"><u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"=
+font-size:11pt;font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u>=
+</u></span></p><p class=3D"MsoNormal" style=3D"text-indent:21.25pt"><b><spa=
+n style=3D"font-size:10pt;font-family:Georgia,serif;color:rgb(23,7,208)">Te=
+cple Innoventive Solutions Pvt. Ltd.</span></b><span style=3D"color:black">=
+<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-size:3p=
+t;font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u></u></span></=
+p><p class=3D"MsoNormal" style=3D"text-indent:21.25pt"><span style=3D"font-=
+size:10pt;font-family:Georgia,serif;color:black">Bengaluru I Chennai I Mumb=
+ai I Mysuru</span><span style=3D"color:black"><u></u><u></u></span></p><p c=
+lass=3D"MsoNormal"><span style=3D"font-size:3pt;font-family:Calibri,sans-se=
+rif;color:black"><u></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal" styl=
+e=3D"text-indent:21.25pt"><span style=3D"font-size:10pt;font-family:Georgia=
+,serif;color:black">Mob.: +91 9448958088</span><span style=3D"color:black">=
+<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-size:3p=
+t;font-family:Calibri,sans-serif;color:black"><u></u>=C2=A0<u></u></span></=
+p><p class=3D"MsoNormal" style=3D"text-indent:21.25pt"><span style=3D"font-=
+size:10pt;font-family:Georgia,serif;color:black">Email: </span><span style=
+=3D"color:black"><a href=3D"mailto:aruna@tecpleglobal.com" target=3D"_blank=
+"><span style=3D"font-size:10pt;font-family:Georgia,serif;color:rgb(23,7,20=
+8)">aruna@tecpleglobal.com</span></a><u></u><u></u></span></p><p class=3D"M=
+soNormal"><span style=3D"font-size:3pt;font-family:Calibri,sans-serif;color=
+:black"><u></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal" style=3D"text=
+-indent:21.25pt"><span style=3D"font-size:10pt;font-family:Georgia,serif;co=
+lor:black">Web:=C2=A0 </span><span style=3D"color:black"><a href=3D"http://=
+www.tecpleglobal.com" target=3D"_blank"><span style=3D"font-size:10pt;font-=
+family:Georgia,serif;color:rgb(23,7,208)">www.tecpleglobal.com</span></a></=
+span><span style=3D"font-size:10pt;font-family:Georgia,serif;color:rgb(23,7=
+,208)">=C2=A0</span><span style=3D"color:black"><u></u><u></u></span></p><p=
+ class=3D"MsoNormal"><span style=3D"font-size:6pt;font-family:Calibri,sans-=
+serif;color:black"><u></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal"><s=
+pan style=3D"font-size:11pt;font-family:Georgia,serif;color:black">=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><a href=3D"https://in.link=
+edin.com/company/tecple-innoventive-solutions-pvt-ltd" target=3D"_blank"><s=
+pan style=3D"font-size:11pt;font-family:Georgia,serif;color:rgb(17,85,204);=
+border:1pt none windowtext;padding:0in;text-decoration:none"><img border=3D=
+"0" width=3D"35" height=3D"35" id=3D"gmail-m_-6434868314493321439Picture_x0=
+020_6" src=3D"cid:179e6b0b7905b16b22" alt=3D"Description: Description: http=
+s://lh3.googleusercontent.com/aUfMyBBcsznpTuTRNjVm-OeJjVqrM9yR9cZkfdloyJDhK=
+8dpu8Hcnn0dzlhjpDPheUASoU7rFmqFQfERVjqVwnys9BFd_oRa3mywdWRMK-J8tLjNB_yjfJ14=
+NxKYlY1sV92DBbQx"></span></a><span style=3D"font-size:11pt;font-family:Geor=
+gia,serif;color:black">=C2=A0 </span><a href=3D"https://www.facebook.com/pa=
+ges/category/Software-Company/Tecple-Innoventive-Solutions-Pvt-Ltd-29854002=
+1094131/" target=3D"_blank"><span style=3D"font-size:11pt;font-family:Georg=
+ia,serif;color:rgb(17,85,204);border:1pt none windowtext;padding:0in;text-d=
+ecoration:none"><img border=3D"0" width=3D"34" height=3D"34" id=3D"gmail-m_=
+-6434868314493321439Picture_x0020_5" src=3D"cid:179e6b0b790692e333" alt=3D"=
+Description: Description: https://lh5.googleusercontent.com/sAhGPDVJFiZ5oGU=
+ENXwxiKpI2_Opbtv87h5RKYy9ow_qmfBRSCqoZ6scZEMlhwqyiU00ud3p6mXlnN8BTjLkB-DYIV=
+FnUZXwZ_i8lWcNpQPQYHcbhmZDeqb3cdywxG84oE3PRgqK"></span></a><span style=3D"f=
+ont-size:11pt;font-family:Georgia,serif;color:black">=C2=A0</span><a href=
+=3D"https://instagram.com/tecpleglobal?igshid=3De1wdtbyk6iem" target=3D"_bl=
+ank"><span style=3D"font-size:11pt;font-family:Georgia,serif;color:rgb(17,8=
+5,204);border:1pt none windowtext;padding:0in;text-decoration:none"><img bo=
+rder=3D"0" width=3D"35" height=3D"35" id=3D"gmail-m_-6434868314493321439Pic=
+ture_x0020_4" src=3D"cid:179e6b0b7907745b44" alt=3D"Description: Descriptio=
+n: https://lh5.googleusercontent.com/Ule37aMd5h9CaV2cCNZLLj21jqLjF7rD7P4huF=
+UYomzA2L0vGzTQirY85bEXQg4qcZhSRzpoMv4YdAVAJJlZ4KhprWEvv8HG2fSRaNYkrn5vZgx8X=
+1Wvqz0SDqUalL-GV54CW4xy"></span></a><span style=3D"font-size:11pt;font-fami=
+ly:Georgia,serif;color:black">=C2=A0</span><a href=3D"https://twitter.com/T=
+ecpleLtd" target=3D"_blank"><span style=3D"font-size:11pt;font-family:Georg=
+ia,serif;color:rgb(17,85,204);border:1pt none windowtext;padding:0in;text-d=
+ecoration:none"><img border=3D"0" width=3D"34" height=3D"34" id=3D"gmail-m_=
+-6434868314493321439Picture_x0020_3" src=3D"cid:179e6b0b790855d355" alt=3D"=
+Description: Description: https://lh4.googleusercontent.com/upYAkMNltM99VBk=
+6KDnJ5z55KMO_LeEBgmCDIJpwPHmy426HEwwJ9QHIPKZzeVNLBsF-lb__nFx4Y5tJTswJlxk3ew=
+VGshZQgJnEhimqkUhcfY_dmzwNrSrsHzIIsxVRJNTwLgVP"></span></a><span style=3D"f=
+ont-size:11pt;font-family:Georgia,serif;color:black">=C2=A0</span><a href=
+=3D"https://www.youtube.com/channel/UCYza2F4yKJ516-QFdEGzDvA" target=3D"_bl=
+ank"><span style=3D"font-size:11pt;font-family:Georgia,serif;color:rgb(17,8=
+5,204);border:1pt none windowtext;padding:0in;text-decoration:none"><img bo=
+rder=3D"0" width=3D"31" height=3D"31" id=3D"gmail-m_-6434868314493321439Pic=
+ture_x0020_2" src=3D"cid:179e6b0b7909374b66" alt=3D"Description: Descriptio=
+n: https://lh5.googleusercontent.com/XhR0Mnh60ko_o4jUw3kyp2VlzRW0UFW7dg9k_5=
+wHOySMLpCummTvsRV6PojSU4ADFMQXYa9KSfmVQjaWsD1NKG27IVT2glD32nZR9kZxq7SgZIjVn=
+TxIHwGwzfKakY2EEBiQqT8w"></span></a><span style=3D"color:black"><u></u><u><=
+/u></span></p></td></tr><tr style=3D"height:21pt"><td width=3D"482" colspan=
+=3D"2" valign=3D"top" style=3D"width:361.5pt;padding:5pt;height:21pt"><p cl=
+ass=3D"MsoNormal"><b><span style=3D"font-size:10pt;font-family:Georgia,seri=
+f;color:rgb(142,5,120)">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0Weaving Technology for the World</span></b><span style=3D"co=
+lor:black"><u></u><u></u></span></p></td></tr></tbody></table><p class=3D"M=
+soNormal" style=3D"margin-bottom:2pt;line-height:115%"><span lang=3D"EN-IN"=
+ style=3D"font-size:10pt;line-height:115%;font-family:Calibri,sans-serif;co=
+lor:rgb(211,18,69)"><u></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal"><=
+span style=3D"font-size:11pt;font-family:Calibri,sans-serif;color:black"><u=
+></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal"><b><span style=3D"font-=
+size:10pt;font-family:Tahoma,sans-serif">From:</span></b><span style=3D"fon=
+t-size:10pt;font-family:Tahoma,sans-serif"> pradeep t [mailto:<a href=3D"ma=
+ilto:pradeeprajkvr@gmail.com" target=3D"_blank">pradeeprajkvr@gmail.com</a>=
+] <br><b>Sent:</b> Wednesday, June 2, 2021 2:14 PM<br><b>To:</b> SURESHNATH=
+AN N<br><b>Cc:</b> Aruna<br><b>Subject:</b> Re: JD and CV Matcher site<u></=
+u><u></u></span></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><div><p =
+class=3D"MsoNormal">Hi Aruna,<u></u><u></u></p><div><p class=3D"MsoNormal">=
+<u></u>=C2=A0<u></u></p></div><div><p class=3D"MsoNormal">As we discussed I=
+ am sharing the screenshots of the postman window, from where I am calling =
+the resume scoring=C2=A0API.=C2=A0 All the other things like functionalitie=
+s we already discussed over the phone.=C2=A0 Please go=C2=A0through it and=
+=C2=A0let me know.<u></u><u></u></p></div><div><p class=3D"MsoNormal"><u></=
+u>=C2=A0<u></u></p></div><div><p class=3D"MsoNormal">Sample Curl command wi=
+th body to call the API=C2=A0 from local is given below.<u></u><u></u></p><=
+/div><div><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p></div><div><p clas=
+s=3D"MsoNormal"><b>curl --location --request POST &#39;<a href=3D"http://0.=
+0.0.0:4000/v1/resumeScoring/" target=3D"_blank">http://0.0.0.0:4000/v1/resu=
+meScoring/</a>&#39; \<br>--header &#39;Content-Type: application/json&#39; =
+\<br>--data-raw &#39;{<br>=C2=A0 =C2=A0 &quot;resume_path&quot;:&quot;/home=
+/pradeep/Desktop/WORK/resume_suggetion_engine/resume/resume1.pdf&quot;,<br>=
+=C2=A0 =C2=A0 &quot;jdDetails&quot;:{<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;=
+req_exp&quot;:3,<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;req_skills&quot;:[&qu=
+ot;java&quot;,&quot;nlp&quot;,&quot;python&quot;,&quot;sql&quot;,&quot;go&q=
+uot;,&quot;cpp&quot;]<br>=C2=A0 =C2=A0 }<br>}&#39;</b><u></u><u></u></p></d=
+iv><div><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p></div><div><p class=
+=3D"MsoNormal"><u></u>=C2=A0<u></u></p></div><div><p class=3D"MsoNormal"><u=
+></u>=C2=A0<u></u></p></div></div><p class=3D"MsoNormal"><u></u>=C2=A0<u></=
+u></p><div><div><p class=3D"MsoNormal">On Thu, May 20, 2021 at 9:54 PM SURE=
+SHNATHAN N &lt;<a href=3D"mailto:sureshnathann@gmail.com" target=3D"_blank"=
+>sureshnathann@gmail.com</a>&gt; wrote:<u></u><u></u></p></div><blockquote =
+style=3D"border-top:none;border-right:none;border-bottom:none;border-left:1=
+pt solid rgb(204,204,204);padding:0in 0in 0in 6pt;margin-left:4.8pt;margin-=
+right:0in"><div><div><p class=3D"MsoNormal">Hi,<u></u><u></u></p></div><div=
+><p class=3D"MsoNormal">Let&#39;s check this site whether we plan this type=
+ of functionality <u></u><u></u></p></div><div><p class=3D"MsoNormal"><u></=
+u>=C2=A0<u></u></p></div><div><p class=3D"MsoNormal"><a href=3D"https://exp=
+ertia.co/demo/cvrank/" target=3D"_blank">https://expertia.co/demo/cvrank/</=
+a><u></u><u></u></p></div><div><p class=3D"MsoNormal"><u></u>=C2=A0<u></u><=
+/p></div><div><p class=3D"MsoNormal">R/<u></u><u></u></p></div><div><p clas=
+s=3D"MsoNormal">Suresh<u></u><u></u></p></div></div></blockquote></div><p c=
+lass=3D"MsoNormal"><br clear=3D"all"><u></u><u></u></p><div><p class=3D"Mso=
+Normal"><u></u>=C2=A0<u></u></p></div><p class=3D"MsoNormal">-- <u></u><u><=
+/u></p><div><div><p class=3D"MsoNormal">Thanks and regards<u></u><u></u></p=
+><div><p class=3D"MsoNormal">Pradeep.T<u></u><u></u></p></div></div></div><=
+/div></div></blockquote></div><br clear=3D"all"><div><br></div>-- <br><div =
+dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr">Thanks and regards<d=
+iv>Pradeep.T</div></div></div>
+
+--0000000000001c760005c42d2867--
+--0000000000001c760105c42d2868
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Disposition: inline; filename="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b78f4ce8e91>
+X-Attachment-Id: 179e6b0b78f4ce8e91
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCACvALEDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiii
+gAooooAKKKKACiiigAooooAKKKKACiioL29ttPtXuruZYokHLMf85NJtJXYm0ldkrusaF3YKqjJJ
+OABUVle2+oWq3VrJ5kLk7XA64JH9K8t8UeL7nXXa3t90FiDwn8Unu3+Fd54K/wCRRsP91v8A0Nq5
+qeIVSo4x2RxUcZGtWcIbJbm7RRRXUdwUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRR
+WZrviHTfDlibvUZwgPCRjl5D6KO/8qaTbshpNuyNFm2oW9BmvGte8Q3uv3XmXDbIUP7qFT8qf4n3
+r0Xwn4jk8UaHdai8CwKJ3jjQHJCgDGT3PNeTYrhx8ZRageLnEpw5YX73/ASvX/BX/Io2H+63/obV
+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
+0pqzCiiiucxCiiigAooooAKKKKAP/9k=
+--0000000000001c760105c42d2868
+Content-Type: image/png; name="image002.png"
+Content-Disposition: inline; filename="image002.png"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b7905b16b22>
+X-Attachment-Id: 179e6b0b7905b16b22
+
+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
+TkSuQmCC
+--0000000000001c760105c42d2868
+Content-Type: image/png; name="image003.png"
+Content-Disposition: inline; filename="image003.png"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b790692e333>
+X-Attachment-Id: 179e6b0b790692e333
+
+iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAS
+dAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAATGSURBVFhH
+xVhNbBtFFH6zM+tdZw1RmgINxiRIDSJSqxZLDWoK+RMCgWgREhKHnhAHuBShnmgvKBc48HNFRUIV
+EhJwgEN7qFJVMW0qIhVkGRKKVCD8GIdSHJoEp/b+Du+t49Q/Sx2vQ3jS2pI98943733vm5kVExMT
+UG/TfwyOSOk97nneEwCyFyST+N0wbmM/MAAm8QN+ZYyfAc85OxLPpOrniuofpnK796s8+joobFSI
+KLiOCdJz0RGN8j9CGgOm8C5FaHs81351+uq+847rHh+Lp7+oOFwHksrufVao6klF1WKudQNsxwoZ
+NHiadD1AEMCYAjzSMcKhdBZjvjCWyHxCM3wgqVxyiKv8JOci5ph/t7n6m0BcT4KHTyWfTGGYbA+k
+WQCu6gaiej/1SzI31pu+KObmBrjS5b4lVCNmbwIIT0owTRdc/L69QwUjFvHZRYBKpgOm7YEqFHDt
+EmDyDcntt2dmBg+IP7uiD6tqZL+D5WiHB8Qgy8HVYtShPTtgfF8centicJuh+kBcV0Kx5MDXVxbh
+xGeXgWN2KCaP6INWnzksGPMOMY6DkZjtGIHQIhyOPLcLDo303cIV88ESOOxMYFxQdp4W2JpPuk6p
+HQzoUALxoTkIgCKWp9ootgIwimRlCaRzW0CKyImHdt0JTw33NvUjOIatMl8eQO5EIJifNjSC0kz8
+GE72YEcEa81SwQSLSIogFpcbs08uagSt6XICBlCXRHUBOxOdDf+urFrwzoffQOZKHjuV+QS1bBco
+K9WYEb5sGwixjtpxW6feAORC+nc4Pf0zRCMCFARB2VOwMvXlWRe0MJmon1Nb+fK/f2EZIoJDROU1
+GQiK135G1rwGbYmUhY1ay0DIteOrZLnTSKiIJ/TUm43aslq0UVWRjWuYVMF8vakf3jIQGwPftU2H
+Bx/Y7jsj6SaOGFG1Acj993bCM+P3+eUhIETW7LVVmP1+sYEnLQMh1lOHHHs+2TTrB/b2AD3V9tHk
+D/DVt9dARGtZ1TIQchpQhaagKgOu5ldv1qlqViggG44aMHAhXwyUz1BAqNZhbXGpFNjKLQMhGV+5
+YcP8bytrO6j0pT2xI+aTttqur5iQx8DUxgSdpH65YG2OoOnYet/NX4cjb17093JqX03j8O6xR+Du
+O4waIJMzWTjx6WWIagLPrOWx1NL1gGlSyxmhpdGWX8CsVHTEQaEgrag36rAC6giNp/alvHAeXNbW
+gWA0clrZL3AHadjEKoCoJDSufpML4lcoIGGJ+m/zJJ7OCEjQfrXZsW7pTwFF4pkVFvDg2I+H1i0N
+XgmGFy/kl/OTkJKdEare7+Bd4/8wzjW8hdqfC+zAU4joZTpB0SF4K60c08VeUk6JBX3+wj2lvrTQ
+YknHoqyEV83WFiHxtmcAXuoyOX0gJQ53L9mpnHIUL9yTXOgaXby3wjAWXfLpSH30cPfHtt++eCs/
+n8rtfhGPLO8JzYjQJfw/KxOWQ6gdPgjHLL003jvrv6JY15Gx+OwHU9lkVoD1Br4+GMR3GTi4VH4t
+sQlG3cEUDQ9HeBlzrS9d2z6OIM5VXNcI2ngiPfXa3MDQaLfxKGP2Qea5j2Fm+hkdvUMSudIEuKAf
+49vFZH7ZPP3KQTh36VKmRi/+ARqH76V/IsJdAAAAAElFTkSuQmCC
+--0000000000001c760105c42d2868
+Content-Type: image/png; name="image004.png"
+Content-Disposition: inline; filename="image004.png"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b7907745b44>
+X-Attachment-Id: 179e6b0b7907745b44
+
+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
+AABJRU5ErkJggg==
+--0000000000001c760105c42d2868
+Content-Type: image/png; name="image005.png"
+Content-Disposition: inline; filename="image005.png"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b790855d355>
+X-Attachment-Id: 179e6b0b790855d355
+
+iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAS
+dAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAXGSURBVFhH
+vVhpbFRVFP7ue3fmzdIWyiJbWwQpRDEhoLJUBIJblKCJMSYu8Y+m8gdj+KOSCNYFEyNoQkQkJUbi
+D5GoCcYQCMqiMREaQl2DgpVSQFmUtrO+5V7PeZ0pHfpmOkODN2k68+bec777ne+cc++TLS0tuHK0
+Nq5erJR7r/Dc+yAwGUrrQZMqeWAIQRY6hSl3adfd03xyw74rl8uBDzbXrVwgo7F15HyJjESgs1lo
+zwVMUYnbwXNpG4aUtcKyZinHfaF12osH3Exi9Yqujd/lJ/cD2dLw3MMyHP7ACFtVKp2CstOXDQ6P
+D9+Odm3/D4YJIxpbLHVsD/l8qrnzne38uw+EmGjyQchwlUr20JNhMlCKP+WBfRhWVRxCbyXfp4mZ
+b+XaG9eYdenetwwrUqUSBEJcQxD9AAVUNgEjXhM3HXv92pFrbpf1mcRCEY4s4HD8PyDyaAhMKgUj
+Eps7yUgskpQQD8hQCNrODE+QudUqpyejHGK1B8okCKUeZI3cryg7gkZeo+XYdBWQdDXCRp+lLH2P
+UbaFTVD2Aw5959+ujLy2ScBCLJGU4PXgFA0YbNwjIxEyVmwwyBQtH2kBj08P45axlBX08Nglhc/+
+cPz/1SGBmaMMnE0q9DqUOAN2pj0CovU0YkSQu8EjRbt7rDHkO/nkuIOasCgwkF+RJqQN1SY2LYpg
+3rhCxI/cEMK2YzbmjzdxIa3x0iEOfwC/whAFBS1vnKlk1A9NDWHBeAnbAz7vcBCXfVTnB7NFj7Bu
+njUIBM+ZUWvg9fkRdGc1Nv1kEysm2i8q0J4Kh4YOBMLaiFJ8QxRTixxvXRrFzHYDm8nYxYxGNAco
+SwBvGytxd32J2JEtBt80wcSnFKpiIxAIs9HraJxO9smVAT0/28KyBomtvzr4qstFF8W729aYEJfE
+Xmk5H7ngYcX+DM5nlM9qUKEOBJI3u+2Yg2WTJeIkNh43jzbx9kITnQmFdjLeds5DXZVBWitdgr45
+4+F4j8LEWDAItl1UI6MsA2Oj8He/fEqoQGIN5Jz/ll8fKp5OA37hEHLmlWpZgUDYRi8l/hPTI1g8
+seiUskDwpC5ikEVdahTViJ8pJK4764YHhLX24z9eQbYFASrqhXXBBWkOFagnZ4QhcxWzbBpyEw//
+7eEk6UMOUfOLAuF1tiewvt32U5j1wEWt0rGDimGa2K0pneHBYs07M4gFFhmzks+cSoC0nXPxZaeD
+WC7rKtZIfgE3qT97Fd6jQvZmUwRmBUdG1tirbTYSVMOqykiuIZUYI7l/9JuDE90Kj04PYekkiYnx
+oQWz9nAGB864ZYezKBDuNxlqJh61ROp/4OrIAO6YUBo7r3uZQLz/s01MlK+pQKvc/qfWGLj1OhMj
+wsAU+jyXOutNtaUV10HZ8Vpb1m+Q3I/KOhzldBBc4mkj56m5cbPiDjxrTHEAzEBHj0ep7vohPEma
+4vNHhUdf/xgwKOCsySQVotZfbGz/3aEeY2DOGEnnDoFaq89JD7X2symNHy56OEph+4s+W7TwalKc
+z3B0YMQZums0+mIYMJhWjjHr43sqSgepcTFAZokjb9P0/PGPAVRTjSlfEZcdCZNSStsdBETsMiKR
+RpUMPiuwc86cGHHHTSt/+cwDqqSuBM0VYQvacfZLrYyddB99FoIipANPjf3reccVxr40TvKp6cJF
+odkpTx/pOlg/e9wRo3rEnGt+yyuApenqGYeX7D7a1T1in2wZ/bHTaq5apbLp3cKKWzqb5H0Pl/Eh
+1muQL+hMmlLCXNVy6RXHT9+nOzYc2NKw8hkzJLYYsZqwShOYIcJ01UgpHMyEzmYcz82saO7c6L+i
+6K8j9OBDup2fMoTxhrBic+mEz5PptUTxA28lYPwbnRWl/Wl602AfVk5ydXPnu3vzNgoKGr0i+Jou
+5U31mdRdyjCXC9e5h6hpBLfhq31Xw+pWCsp1Twid3k12vjj178G9LZcOFdzq/gPgCTWB0GRCxwAA
+AABJRU5ErkJggg==
+--0000000000001c760105c42d2868
+Content-Type: image/png; name="image006.png"
+Content-Disposition: inline; filename="image006.png"
+Content-Transfer-Encoding: base64
+Content-ID: <179e6b0b7909374b66>
+X-Attachment-Id: 179e6b0b7909374b66
+
+iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAS
+dAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAALiSURBVFhH
+xVdNSFRRFP4mxxx/kjFiBCUhcCviDxKorTUsIrFVK5EGXBRRoQY2vKLFbIVwJy6MkAgpDcyFLnQT
+7hw3jVAQCOpKBXUYdeo7vXnmjNf33p030YHDe/dxvvOdc3/Ouc9vGAZOy4tI5DLHnWm9wecl6q8M
+I71BkuZfqbPUzy8N46cF92cR93M8SL2q59/R+jYtRLeZXIgBHAriDzk/FPHxmvrE0Y03gyDh78h3
+nwEkrMxl7v81sRV2N19+UJ/5GcU1vjz2lpA2+hF5RyXzu9SL2nBvgELC7wn5HW9+ckZ3Cnl9znBv
+wHohv3Cuj9ZWoLkZqKoCKiqA0lKguJiLxFXyE1pQYEJTKeDoCEjySCcSwN4eD9U2sLEBxGLA3Bwr
+xZlSERBydQEZHgakAPl83vIT9NgYEA6bAf6VVEaROfleWwsMDeWHWJz29gITE8DCQkYiavK6OnN6
+8yktLS7JKyvtabe2gHgcaGtzH1519RlbdebBoL3TzU2gqwvo6AAGBoCGBucgystdkpeU2DuTnS6b
+Z3ISmJ4G+vqAfvYk2SvWCcj2oFhGdeaFUoAcRAIQ2d8HRkaApSVgagqoqVEDFUGpyTOPhNqZZSOz
+JLtZMles6wn4+NjltEuRsBMhlkx6etj92f4bG53mCTg4cEku1clO5DTMzADt7c6klsXurkty2c12
+EgoBojqyvu6SfHXVnKZ8FprlZZfka2tANApEIvkpsePjwOKiklzdOaSpzM8DTU3mLpbCU1YGBAJA
+Ea982V3tkHfC011tZ8fsaisrZleTzpcpvvO7mhhKtIqIdZbaxjYp5FxgXM+TQx03MSH/9J/IZ4X8
+A/UVNX0t0Qk+Z1vZAO/9vLzHeY19w8HDnF3pA0fJ+82q7c+J5zbGA30/2ogvRMgvmfm7xCikmIc5
+A9/5fEq9ou3SHYC3S3Sn+UxyS/gxygDecnyLepPK6yt4bfUkkpiUN8n4o0UsHn8DLqvBUp6EyMkA
+AAAASUVORK5CYII=
+--0000000000001c760105c42d2868--
+--0000000000001c760205c42d2869
+Content-Type: application/zip; name="CODE.zip"
+Content-Disposition: attachment; filename="CODE.zip"
+Content-Transfer-Encoding: base64
+Content-ID: <f_kpmnrvch6>
+X-Attachment-Id: f_kpmnrvch6
+
+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
+BQYAAAAACQAJAGMDAAAWDwAAAAA=
+--0000000000001c760205c42d2869--
